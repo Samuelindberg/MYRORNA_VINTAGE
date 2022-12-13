@@ -1,15 +1,19 @@
 import React from 'react'
-import outfit from '../assets/greenshirt.png'
-let title = document.getElementById("landing-title");
+import shirt from '../assets/greenshirt.png'
 export default function LandingSection() {
     return (
         <section className='landing-section-container'>
-            <h1 id='landing-title'>A Vintage Store that cares for your wallet and the environment</h1>
+            <h1 id='landing-title'>A Vintage Store that cares for your wallet and the <span id='enviroment-span'>environment</span></h1>
+            <img src={shirt} alt="" id="greenshirt-img" />
         </section>
     )
 }
 window.addEventListener("scroll", () => {
+    const landingTitle = document.getElementById("landing-title");
+    const greenShirtImg = document.getElementById("greenshirt-img");
     console.log(scrollY)
-    title.style.transform = 'translateX(' + scrollY + 'px)'
-    title.style.opacity = 1 - scrollY / 400;
+    landingTitle.style.transform = 'translate(' + scrollY + 'px,' + scrollY + 'px)'
+    greenShirtImg.style.transform = 'translate(0,' + scrollY / 2 + 'px)'
+    landingTitle.style.opacity = 1 - scrollY / 600;
+    greenShirtImg.style.opacity = 1 - scrollY / 600;
 })
