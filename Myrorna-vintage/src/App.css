@@ -8,10 +8,8 @@
 }
 
 body {
-    height: 200vh;
     overflow-x: hidden;
 }
-
 
 header {
     position: fixed;
@@ -96,7 +94,18 @@ nav a {
     width: 70%;
 }
 
-.handpicked-card>* {}
+#right.handpicked-card {
+    flex-direction: row-reverse;
+}
+
+#right.handpicked-card h1,
+#right.handpicked-card h3 {
+    text-align: start;
+}
+
+#left.handpicked-card p {
+    text-align: end;
+}
 
 #handpicked-content {
     width: 100%;
@@ -118,7 +127,7 @@ nav a {
     text-align: end;
 }
 
-#image-handpicked {
+.image-handpicked {
     padding-left: 10px;
     width: 20%;
 }
@@ -127,3 +136,5 @@ nav a {
     font-family: 'poppins';
     font-weight: 700;
 }
+
+#handpicked-seemore {}

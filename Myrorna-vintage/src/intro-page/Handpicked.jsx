@@ -1,11 +1,37 @@
 import React from 'react'
 import jacket from '../assets/pilotjacket.png'
+import bluehat from '../assets/bluehat.png'
 import HandpickedCard from './HandpickedCard'
+const pilotJacket = {
+    img: 'https://storage.cloud.google.com/handpicked/pilotjacket.png',
+    title: "Vintage Pilot Jacket",
+    price: "1299kr",
+    desc: "Featuring a classic pilot jacket design, this jacket has a timeless appeal that will never go out of style. It has a durable leather exterior and a warm, insulated interior, making it perfect for keeping warm on cold flights or on the ground. The jacket also has multiple pockets for storing small items, and a comfortable and adjustable fit.",
+    number: 1
+}
+const handpickedVest = {
+    img: 'https://storage.cloud.google.com/handpicked/blackvest.png',
+    title: "Our Legacy - Vest",
+    price: "749kr",
+    desc: "The Our Legacy Black Vest is a versatile and stylish piece of clothing that is perfect for any occasion. Made from high-quality materials, this vest is comfortable to wear and will last for years to come.",
+    number: 2
+}
+const handpickedHat = {
+    img: 'https://storage.cloud.google.com/handpicked/bluehat.png',
+    title: "Our Legacy - Vest",
+    price: "149kr",
+    desc: "The Our Legacy Black Vest is a versatile and stylish piece of clothing that is perfect for any occasion. Made from high-quality materials, this vest is comfortable to wear and will last for years to come.",
+    number: 3
+}
+
 export default function Handpicked() {
     return (
         <section className='handpicked-section'>
             <h1 id="handpicked-title"><span id="hand">Hand</span> <span id="picked">Picked</span></h1>
-            <HandpickedCard img={jacket} title="Our Legacy – Pilot Jacket" price="1299kr" />
+            <HandpickedCard {...pilotJacket} />
+            <HandpickedCard {...handpickedVest} />
+            <HandpickedCard {...handpickedHat} />
+            <button id="handpicked-seemore">See more!</button>
         </section>
     )
 }
