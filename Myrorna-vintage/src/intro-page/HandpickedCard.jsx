@@ -1,18 +1,17 @@
 import React from 'react'
-import jacket from '../assets/pilotjacket.png'
 export default function HandpickedCard(props) {
     return (
         <section className='handpicked-card'>
-            <img src={jacket} alt="" id='pilotjacket' />
+            <img src={props.img} alt="" id='image-handpicked' />
             <div id="handpicked-content">
-                <h1>Our Legacy – Pilot Jacket</h1>
+                <h1>{props.title}</h1>
                 <p></p>
-                <img src="" alt="" />
-                <h3><span id="price">Price:</span> 1299kr</h3>
+                <h3><span id="price">Price: </span>{props.price}</h3>
             </div>
         </section>
     )
 }
 window.addEventListener("scroll", () => {
-    const image = document.getElementById("pilotjacket");
+    const image = document.getElementById("image-handpicked");
+    image.style.opacity = 0 + scrollY / 800;
 })
