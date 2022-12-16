@@ -18,13 +18,21 @@ const handpickedVest = {
 }
 const handpickedHat = {
     img: 'https://storage.cloud.google.com/handpicked/bluehat.png',
-    title: "Our Legacy - Vest",
+    title: "COS - Hat",
     price: "149kr",
-    desc: "The Our Legacy Black Vest is a versatile and stylish piece of clothing that is perfect for any occasion. Made from high-quality materials, this vest is comfortable to wear and will last for years to come.",
+    desc: "The COS Blue Knit Beanie is a stylish and comfortable accessory that is perfect for keeping warm during the colder months. Made from high-quality knit material, this beanie is soft to the touch and will provide plenty of warmth and insulation on chilly days.",
     number: 3
 }
 
 export default function Handpicked() {
+
+    async function fetchProducts(){
+        const url = "http://localhost:4000/handpicked"
+        const response = await fetch(url)
+        const data = await response.json();
+        console.table(data)
+     }
+     fetchProducts()
     return (
         <section className='handpicked-section'>
             <h1 id="handpicked-title"><span id="hand">Hand</span> <span id="picked">Picked</span></h1>
@@ -43,5 +51,4 @@ window.addEventListener("scroll", () => {
         picked.style.opacity = 0 + scrollY / 800;
         picked.style.opacity > 0.6 ? document.getElementById("hand").style.opacity = 1 : console.log();
     }
-
 })

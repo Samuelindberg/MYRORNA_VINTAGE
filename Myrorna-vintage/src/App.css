@@ -35,6 +35,8 @@ nav a {
 }
 
 #logo {
+    background-color: rgba(255, 255, 255, 0.69);
+    backdrop-filter: blur(20px);
     white-space: nowrap;
     padding: 0 10px;
 }
@@ -92,6 +94,8 @@ nav a {
 .handpicked-card {
     display: flex;
     width: 70%;
+    margin-bottom: 50px;
+    padding: 20px;
 }
 
 #right.handpicked-card {
@@ -115,10 +119,12 @@ nav a {
     font-size: 4rem;
     text-align: end;
     border-bottom: 3px dotted black;
+    padding-bottom: 4px;
 }
 
 .handpicked-card p {
     font-size: 1rem;
+    padding: 15px 0;
 }
 
 .handpicked-card h3 {
@@ -137,4 +143,10 @@ nav a {
     font-weight: 700;
 }
 
-#handpicked-seemore {}
+#handpicked-seemore {
+    width: 150px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 192, 206, 0.496);
+    font-size: 1.4rem;
+}
