@@ -11,7 +11,6 @@ export default function LandingSection() {
 window.addEventListener("scroll", () => {
     const landingTitle = document.getElementById("landing-title");
     const greenShirtImg = document.getElementById("greenshirt-img");
-    console.log(scrollY)
     landingTitle.style.transform = 'translate(' + scrollY + 'px,' + scrollY + 'px)'
     greenShirtImg.style.transform = 'translate(0,' + scrollY / 2 + 'px)'
     landingTitle.style.opacity = 1 - scrollY / 600;

@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import jacket from '../assets/pilotjacket.png'
 import bluehat from '../assets/bluehat.png'
 import HandpickedCard from './HandpickedCard'
+import Datafetching from './Datafetching'
 const pilotJacket = {
     img: 'https://storage.cloud.google.com/handpicked/pilotjacket.png',
     title: "Vintage Pilot Jacket",
@@ -25,20 +26,13 @@ const handpickedHat = {
 }
 
 export default function Handpicked() {
-
-    async function fetchProducts(){
-        const url = "http://localhost:4000/handpicked"
-        const response = await fetch(url)
-        const data = await response.json();
-        console.table(data)
-     }
-     fetchProducts()
     return (
         <section className='handpicked-section'>
             <h1 id="handpicked-title"><span id="hand">Hand</span> <span id="picked">Picked</span></h1>
-            <HandpickedCard {...pilotJacket} />
-            <HandpickedCard {...handpickedVest} />
-            <HandpickedCard {...handpickedHat} />
+            <Datafetching />
+            <HandpickedCard  />
+            {/* <HandpickedCard {...handpickedVest} />
+            <HandpickedCard {...handpickedHat} /> */}
             <button id="handpicked-seemore">See more!</button>
         </section>
     )
@@ -46,7 +40,6 @@ export default function Handpicked() {
 window.addEventListener("scroll", () => {
     const picked = document.getElementById("picked");
     const jacket = document.getElementById("pilotjacket-img");
-    console.log(window.innerHeight)
     if (scrollY) {
         picked.style.opacity = 0 + scrollY / 800;
         picked.style.opacity > 0.6 ? document.getElementById("hand").style.opacity = 1 : console.log();
