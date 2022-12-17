@@ -30,7 +30,7 @@ export default function Handpicked() {
         <section className='handpicked-section'>
             <h1 id="handpicked-title"><span id="hand">Hand</span> <span id="picked">Picked</span></h1>
             <Datafetching />
-            <HandpickedCard  />
+            <HandpickedCard {...0}/>
             {/* <HandpickedCard {...handpickedVest} />
             <HandpickedCard {...handpickedHat} /> */}
             <button id="handpicked-seemore">See more!</button>
