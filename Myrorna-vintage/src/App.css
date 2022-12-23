@@ -7,6 +7,8 @@
   margin: 0;
 }
 html {
+}
+.app {
   overflow-x: hidden;
 }
 header {
@@ -15,10 +17,12 @@ header {
   width: 100vw;
   justify-content: space-between;
   z-index: 3;
+  padding: 10px;
+  background-color: rgba(130, 213, 255, 0.69);
+  backdrop-filter: blur(20px) hue-rotate(90deg) brightness(0.9);
 }
 
 nav {
-  background-color: rgb(105, 208, 255);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -32,10 +36,9 @@ nav a {
 }
 
 #logo {
-  background-color: rgba(255, 255, 255, 0.69);
-  backdrop-filter: blur(20px);
   white-space: nowrap;
   padding: 0 10px;
+  color: rgba(0, 105, 157, 0.688);
 }
 
 /* intro page */
@@ -78,7 +81,7 @@ nav a {
 }
 
 #handpicked-title {
-  font-size: 10rem;
+  font-size: 6rem;
   width: 100%;
 }
 
@@ -93,23 +96,34 @@ nav a {
   justify-content: space-between;
   margin: 2rem;
   width: 100%;
+  text-align: end;
 }
 #handpicked-right {
-  text-align: end;
+  text-align: start;
 }
 .handpicked-section {
   width: 80%;
+}
+.handpicked-card-container img {
+  padding: 10px;
+  width: 20%;
 }
 .handpicked-content {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .handpicked-title {
-  font-size: 4rem;
+  font-size: 3rem;
   border-bottom: 3px dotted black;
-  margin-right: 20px;
 }
-#handpicked-right .handpicked-title {
-  margin: 0 0 0 20px;
+#handpicked-seemore {
+  width: 200px;
+  height: 40px;
+  border-radius: 7px;
+  border: none;
+  background-color: red;
+  color: white;
+  font-size: 0.9rem;
 }

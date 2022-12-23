@@ -22,29 +22,29 @@ export default function HandpickedCard(props) {
       {products.map((product, index) => {
         if (index % 2 === 0) {
           return (
-            <div
-              className="handpicked-card-container"
-              id="handpicked-right"
-              key={product.id}
-            >
+            <div className="handpicked-card-container" key={product.id}>
               <img src={"https://" + product.imgUrl} alt={product.type} />
               <div className="handpicked-content">
                 <h1 className="handpicked-title">
                   {product.brandName} {product.type}
                 </h1>
-                <h2>Price: {product.price * 10} kr</h2>
+                <h2>Price: {Math.round(product.price * 10)} kr</h2>
                 <h2>Size: {product.size}</h2>
               </div>
             </div>
           );
         } else {
           return (
-            <div className="handpicked-card-container" key={product.id}>
+            <div
+              className="handpicked-card-container"
+              id="handpicked-right"
+              key={product.id}
+            >
               <div className="handpicked-content">
                 <h1 className="handpicked-title">
                   {product.brandName} {product.type}
                 </h1>
-                <h2>Price: {product.price * 10} kr</h2>
+                <h2>Price: {Math.round(product.price * 10)} kr</h2>
                 <h2>Size: {product.size}</h2>
               </div>
               <img src={"https://" + product.imgUrl} alt={product.type} />
