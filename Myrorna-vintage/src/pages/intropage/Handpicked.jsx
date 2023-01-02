@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import jacket from "../assets/pilotjacket.png";
-import bluehat from "../assets/bluehat.png";
 import HandpickedCard from "./HandpickedCard";
 import Datafetching from "./Datafetching";
+import { Link } from "react-router-dom";
 
 export default function Handpicked() {
   return (
@@ -12,7 +11,9 @@ export default function Handpicked() {
       </h1>
       <Datafetching />
       <HandpickedCard />
-      <button id="handpicked-seemore">See more!</button>
+      <Link to="/products" id="handpicked-seemore">
+        See more!
+      </Link>
     </section>
   );
 }

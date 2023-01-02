@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function HandpickedCard(props) {
+export default function HandpickedCard() {
   const [products, setProducts] = useState([]);
-  let handpickedproducts = [];
   useEffect(() => {
     axios
       .get("http://localhost:4000/products/handpicked")
